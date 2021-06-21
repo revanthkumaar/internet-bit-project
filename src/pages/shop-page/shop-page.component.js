@@ -4,7 +4,7 @@ import './shop-page.styles.css'
 const ShopPage = () => {
     return (
 
-        <div className="homepage">
+        <div className="shop-page">
         <p>this is shop page</p>
     </div>
 
