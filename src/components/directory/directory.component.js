@@ -36,6 +36,7 @@ class Directory extends React.Component {
         return(
             <div className="directory">
                 <p>{this.state.sections[1].title}</p>
+               
             </div>
 
         )
