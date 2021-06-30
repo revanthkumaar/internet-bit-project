@@ -1,9 +1,13 @@
 import { ReactComponent } from '*.svg';
 import React from 'react';
+//HOC of react-redux library
+import {connect} from 'react-redux';
+import * as bookActions from '../actions/bookActions.js'
 
 
 class Book extends React.Component{
 
+    // eslint-disable-next-line no-useless-constructor
     constructor(props){
         super(props);
     }
@@ -14,7 +18,7 @@ class Book extends React.Component{
 
 
     render(){
-        let textInput = null;
+        let titleInput = null;
 
 
         return(
@@ -46,3 +50,17 @@ class Book extends React.Component{
 
 
 }
+
+const mapStateToProps = (state,props) => {
+    return {
+        books:state.books
+    }
+}
+
+const mapDispatchToProps = (dispatch) => {
+    return {
+        createBook: book => dispatch(bookActions.createBook(book))
+    }
+}
+
+export default connect(mapStateToProps,mapDispatchToProps)(Book);
