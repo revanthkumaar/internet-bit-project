@@ -4,6 +4,7 @@ import HomePage from './pages/home-page/home-page.component'
 import ShopPage from './pages/shop-page/shop-page.component'
 //attaching application with router
 import {Switch, Route} from 'react-router-dom'
+import Book from './components/books/BookPage'
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
       <Route exact path='/' component={HomePage}/>
       <Route path='/shop' component={ShopPage}/>
      
+            <Route path='/bookpage' component={Book}/>
 
     </div>
   );

@@ -1,6 +1,12 @@
-import { createStore } from 'redux'
- 
+import { applyMiddleware, createStore } from 'redux'
+import bookReducer from './reducers/bookReducer'
+
+import { createLogger } from 'redux-logger'
+
+const logger = createLogger({
+    //options
+});
 
 export default function configureStore(state){
-    return createStore(rootReducer, state)
+    return createStore(bookReducer,state,applyMiddleware(logger))
 }
