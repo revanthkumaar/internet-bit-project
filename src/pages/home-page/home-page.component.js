@@ -7,7 +7,7 @@ const HomePage = () => {
 
     <div className="home-page">
          
-        <Directory/>
+      
     </div>
 
     )

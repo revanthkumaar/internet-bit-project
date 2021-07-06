@@ -1,3 +1,4 @@
+/*
 import { ReactComponent } from "react";
 import React from "react";
 //HOC of react-redux library
@@ -52,3 +53,4 @@ const mapDispatchToProps = (dispatch) => {
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(Book);
+*/

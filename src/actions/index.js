@@ -1,5 +1,7 @@
-import * as bookActions from "./bookActions";
-import * as userActions from "./userActions";
+
+/*
+import bookActions from "./bookActions";
+import userActions from "./userActions";
 
 const allActions = () => {
   bookActions, userActions;
@@ -7,3 +9,5 @@ const allActions = () => {
 
 
 export default allActions;
+
+*/

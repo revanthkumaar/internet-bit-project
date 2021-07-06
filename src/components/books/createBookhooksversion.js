@@ -1,9 +1,9 @@
 import React, { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import "./App.css";
-import allActions from "./actions";
+import * as bookActions from '../../actions/bookActions'
+import * as userActions from '../../actions/userActions'
 
-const App = () => {
+const UserComponent = () => {
   const counter = useSelector((state) => state.counter);
   const currentUser = useSelector((state) => state.currentUser);
 
@@ -14,7 +14,7 @@ const App = () => {
   };
 
   useEffect(() => {
-    dispatch(allActions.userActions.setUser(user));
+    dispatch(userActions.setUser(user));
   }, []);
 
   return (
@@ -27,7 +27,7 @@ const App = () => {
             Hello,
             {currentUser.user.name}{" "}
           </h1>{" "}
-          <button onClick={() => dispatch(allActions.userActions.logOut())}>
+          <button onClick={() => dispatch(userActions.logOut())}>
             {" "}
             Logout{" "}
           </button>{" "}
@@ -36,7 +36,7 @@ const App = () => {
         <>
           <h1> Login </h1>{" "}
           <button
-            onClick={() => dispatch(allActions.userActions.setUser(user))}
+            onClick={() => dispatch(userActions.setUser(user))}
           >
             {" "}
             Login as Revanth{" "}
@@ -44,11 +44,13 @@ const App = () => {
         </>
       )}{" "}
       <h1> Counter: {counter} </h1>{" "}
-      <button onClick={() => dispatch(allActions.counterActions.increment())}>
+      < button onClick = {
+           () => dispatch(bookActions.incrementCount())
+      } >
         {" "}
         Increase Counter{" "}
       </button>{" "}
-      <button onClick={() => dispatch(allActions.counterActions.decrement())}>
+      <button onClick={() => dispatch(bookActions.decrementCount())}>
         {" "}
         Decrease Counter{" "}
       </button>{" "}
@@ -56,4 +58,4 @@ const App = () => {
   );
 };
 
-export default App;
+export default UserComponent;
