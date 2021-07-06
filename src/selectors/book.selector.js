@@ -1,5 +1,0 @@
-import {
-    createSelector
-} from 'reselect'
-
-
