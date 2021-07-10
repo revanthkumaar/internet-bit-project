@@ -14,7 +14,7 @@ function App() {
       <Route exact path="/signin" component={SignInPage} />
       <Route path="/signin/cart" component={CartPage} />
       <Route path="/hats" component={SignInPage} />
-      <Route path="/checkout" component={CheckOutPage} />
+     
     </div>
   );
 }

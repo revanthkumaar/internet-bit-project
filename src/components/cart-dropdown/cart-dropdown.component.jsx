@@ -1,18 +1,22 @@
 import React from 'react';
-import withRouter from 'react-router-dom'
+import {withRouter} from 'react-router-dom'
+import CustomButton from '../custom-button/custom-button.component'
 
-const CartDropdown = () => {
-    <div classname='cart-dropdown'>
+const CartDropdown = ({history}) => {
+    return(
+          <div classname='cart-dropdown'>
+              <p>cart dropdown</p>
         <div classname='cart-items'></div>
         <CustomButton onClick={
             () => {
-                history.push('/checkout');
-                dispatch(toggleCartHidden());
+                history.push('/checkout');   
             }
         }>
             GO TO CHECKOUT
         </CustomButton>
     </div>
+    )
+  
 
 }
 
